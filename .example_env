@@ -1,0 +1,15 @@
+POSTGRES_DB=example
+POSTGRES_USER=example
+POSTGRES_PASSWORD=example
+
+FORTYTWO_CLIENT_ID=example
+FORTYTWO_CLIENT_SECRET=example
+FORTYTWO_REDIRECT_URI=example
+
+FORTYTWO_AUTH_URL=https://api.intra.42.fr/oauth/authorize
+FORTYTWO_TOKEN_URL=https://api.intra.42.fr/oauth/token
+FORTYTWO_API_URL=https://api.intra.42.fr/v2/me
+
+EMAIL_HOST_PASSWORD='example'
+EMAIL_HOST_USER='example@example.com'
+DJANGO_SECRET_KEY='example-key'

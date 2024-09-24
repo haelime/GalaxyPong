@@ -1,0 +1,12 @@
+/data/
+/backend/postgres
+**/__pycache__/
+.DS_Store
+**/.DS_Store
+backend/media/profile_images/*
+!backend/media/profile_images/.gitkeep
+media/
+**/migrations/*
+!**/migrations/__init__.py
+*.out
+Win32_2d_plotter
