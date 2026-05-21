@@ -10,3 +10,11 @@ media/
 !**/migrations/__init__.py
 *.out
 Win32_2d_plotter
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.example_env
+playwright-report/
+test-results/

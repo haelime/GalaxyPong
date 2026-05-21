@@ -1,35 +1,32 @@
 up:
 	docker compose up --build -d
-	
-
-build:
-	docker compose build
-
-back_re:
-	docker compose up -d --no-deps backend
-front:
-	docker compose up -d --no-deps frontend
 
 down:
-	docker compose down --volumes
+	docker compose down
 
-clean :
-	docker compose -f docker-compose.yml down -v --rmi all --remove-orphans
+clean:
+	docker compose down -v --remove-orphans
 
-fclean: clean
-	docker system prune --volumes --all --force
-	docker network prune --force
-	docker volume prune --force
-	docker image prune --force
-	docker container prune --force
-	-rm -rf data/
-	-find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
-	-find . -path "*/migrations/*.pyc" -delete
+logs:
+	docker compose logs -f
+
+dev:
+	corepack pnpm dev
+
+build:
+	corepack pnpm build
+
+lint:
+	corepack pnpm lint
+
+typecheck:
+	corepack pnpm typecheck
+
+test:
+	corepack pnpm test
 
 migrate:
-	- docker compose run backend python manage.py makemigrations
-	- docker compose run backend python manage.py migrate
+	corepack pnpm db:migrate
 
-re:
-	make fclean
-	make up
+seed:
+	corepack pnpm db:seed

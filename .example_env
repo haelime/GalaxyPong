@@ -1,15 +1,16 @@
-POSTGRES_DB=example
-POSTGRES_USER=example
-POSTGRES_PASSWORD=example
+POSTGRES_DB=galaxy_pong
+POSTGRES_USER=galaxy
+POSTGRES_PASSWORD=galaxy_password
 
-FORTYTWO_CLIENT_ID=example
-FORTYTWO_CLIENT_SECRET=example
-FORTYTWO_REDIRECT_URI=example
+WEB_ORIGIN=http://localhost:8080
+JWT_ACCESS_SECRET=replace-with-a-long-access-secret
+JWT_REFRESH_SECRET=replace-with-a-long-refresh-secret
 
-FORTYTWO_AUTH_URL=https://api.intra.42.fr/oauth/authorize
-FORTYTWO_TOKEN_URL=https://api.intra.42.fr/oauth/token
-FORTYTWO_API_URL=https://api.intra.42.fr/v2/me
-
-EMAIL_HOST_PASSWORD='example'
-EMAIL_HOST_USER='example@example.com'
-DJANGO_SECRET_KEY='example-key'
+# Use EMAIL_MODE=console for local development.
+EMAIL_MODE=console
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=example@example.com
+SMTP_PASSWORD=example
+SMTP_FROM=GalaxyPong <example@example.com>
